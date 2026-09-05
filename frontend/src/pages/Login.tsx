@@ -112,7 +112,7 @@ export const Login: React.FC = () => {
     const payload = isRegister ? { name, email, password, role } : { email, password };
 
     try {
-      const res = await fetch(`http://https://amdox-backend-1.onrender.com:5000${endpoint}`, {
+      const res = await fetch(`https://amdox-backend-1.onrender.com${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
@@ -212,7 +212,6 @@ export const Login: React.FC = () => {
                   padding: 0,
                   display: 'flex',
                   alignItems: 'center',
-                  justify: 'center',
                 }}
               >
                 {showPassword ? '🙈' : '👁️'}
