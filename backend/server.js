@@ -131,4 +131,4 @@ app.post('/api/attendance', authenticateToken, async (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Backend running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Backend running on http://https://amdox-backend-1.onrender.com:${PORT}`));

@@ -25,7 +25,7 @@ export const Employees: React.FC = () => {
   const fetchEmployees = async () => {
     try {
       const token = localStorage.getItem('erp_token');
-      const res = await fetch('http://localhost:5000/api/employees', {
+      const res = await fetch('http://https://amdox-backend-1.onrender.com:5000/api/employees', {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (res.ok) {
@@ -45,7 +45,7 @@ export const Employees: React.FC = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('erp_token');
-      const res = await fetch('http://localhost:5000/api/employees', {
+      const res = await fetch('http://https://amdox-backend-1.onrender.com:5000/api/employees', {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -69,7 +69,7 @@ export const Employees: React.FC = () => {
   const handleDeleteEmployee = async (id: string | number) => {
     try {
       const token = localStorage.getItem('erp_token');
-      const res = await fetch(`http://localhost:5000/api/employees/${id}`, {
+      const res = await fetch(`http://https://amdox-backend-1.onrender.com:5000/api/employees/${id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });

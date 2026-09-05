@@ -7,7 +7,7 @@ export const Payroll: React.FC = () => {
     const fetchPayroll = async () => {
       try {
         const token = localStorage.getItem('erp_token');
-        const res = await fetch('http://localhost:5000/api/payroll', {
+        const res = await fetch('http://https://amdox-backend-1.onrender.com:5000/api/payroll', {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (res.ok) setPayroll(await res.json());

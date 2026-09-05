@@ -24,7 +24,7 @@ export const Finance: React.FC = () => {
   const fetchTransactions = async () => {
     try {
       const token = localStorage.getItem('erp_token');
-      const res = await fetch('http://localhost:5000/api/finance', {
+      const res = await fetch('http://https://amdox-backend-1.onrender.com:5000/api/finance', {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ export const Finance: React.FC = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('erp_token');
-      const res = await fetch('http://localhost:5000/api/finance', {
+      const res = await fetch('http://https://amdox-backend-1.onrender.com:5000/api/finance', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -71,7 +71,7 @@ export const Finance: React.FC = () => {
   const handleDeleteTransaction = async (id: string | number) => {
     try {
       const token = localStorage.getItem('erp_token');
-      const res = await fetch(`http://localhost:5000/api/finance/${id}`, {
+      const res = await fetch(`http://https://amdox-backend-1.onrender.com:5000/api/finance/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,

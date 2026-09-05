@@ -1,0 +1,80 @@
+# Query: localhost
+# ContextLines: 1
+
+17 results - 9 files
+
+backend/server.js:
+  133  const PORT = process.env.PORT || 5000;
+  134: app.listen(PORT, () => console.log(`Backend running on http://localhost:${PORT}`));
+
+frontend/src/pages/Attendance.tsx:
+  11        const token = localStorage.getItem('erp_token');
+  12:       const res = await fetch('http://localhost:5000/api/attendance', {
+  13          headers: { Authorization: `Bearer ${token}` },
+
+  28        const timeString = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  29:       const res = await fetch('http://localhost:5000/api/attendance', {
+  30          method: 'POST',
+
+frontend/src/pages/Dashboard.tsx:
+  26          const token = localStorage.getItem('erp_token');
+  27:         const res = await fetch('http://localhost:5000/api/dashboard/stats', {
+  28            headers: { Authorization: `Bearer ${token}` },
+
+frontend/src/pages/Departments.tsx:
+  11        const token = localStorage.getItem('erp_token');
+  12:       const res = await fetch('http://localhost:5000/api/departments', {
+  13          headers: { Authorization: `Bearer ${token}` },
+
+  28        const token = localStorage.getItem('erp_token');
+  29:       const res = await fetch('http://localhost:5000/api/departments', {
+  30          method: 'POST',
+
+frontend/src/pages/Employees.tsx:
+  27        const token = localStorage.getItem('erp_token');
+  28:       const res = await fetch('http://localhost:5000/api/employees', {
+  29          headers: { Authorization: `Bearer ${token}` },
+
+  47        const token = localStorage.getItem('erp_token');
+  48:       const res = await fetch('http://localhost:5000/api/employees', {
+  49          method: 'POST',
+
+  71        const token = localStorage.getItem('erp_token');
+  72:       const res = await fetch(`http://localhost:5000/api/employees/${id}`, {
+  73          method: 'DELETE',
+
+frontend/src/pages/Finance.tsx:
+  26        const token = localStorage.getItem('erp_token');
+  27:       const res = await fetch('http://localhost:5000/api/finance', {
+  28          headers: {
+
+  49        const token = localStorage.getItem('erp_token');
+  50:       const res = await fetch('http://localhost:5000/api/finance', {
+  51          method: 'POST',
+
+  73        const token = localStorage.getItem('erp_token');
+  74:       const res = await fetch(`http://localhost:5000/api/finance/${id}`, {
+  75          method: 'DELETE',
+
+frontend/src/pages/Login.tsx:
+  114      try {
+  115:       const res = await fetch(`http://localhost:5000${endpoint}`, {
+  116          method: 'POST',
+
+frontend/src/pages/Payroll.tsx:
+   9          const token = localStorage.getItem('erp_token');
+  10:         const res = await fetch('http://localhost:5000/api/payroll', {
+  11            headers: { Authorization: `Bearer ${token}` },
+
+frontend/src/pages/Projects.tsx:
+  26        const token = localStorage.getItem('erp_token');
+  27:       const res = await fetch('http://localhost:5000/api/projects', {
+  28          headers: {
+
+  47        const token = localStorage.getItem('erp_token');
+  48:       const res = await fetch('http://localhost:5000/api/projects', {
+  49          method: 'POST',
+
+  73        const token = localStorage.getItem('erp_token');
+  74:       const res = await fetch(`http://localhost:5000/api/projects/${id}`, {
+  75          method: 'DELETE',

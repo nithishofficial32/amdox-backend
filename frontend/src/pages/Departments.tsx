@@ -9,7 +9,7 @@ export const Departments: React.FC = () => {
   const fetchDepts = async () => {
     try {
       const token = localStorage.getItem('erp_token');
-      const res = await fetch('http://localhost:5000/api/departments', {
+      const res = await fetch('http://https://amdox-backend-1.onrender.com:5000/api/departments', {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (res.ok) setDepartments(await res.json());
@@ -26,7 +26,7 @@ export const Departments: React.FC = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('erp_token');
-      const res = await fetch('http://localhost:5000/api/departments', {
+      const res = await fetch('http://https://amdox-backend-1.onrender.com:5000/api/departments', {
         method: 'POST',
         headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, head, count: 0 }),

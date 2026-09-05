@@ -9,7 +9,7 @@ export const Attendance: React.FC = () => {
   const fetchAttendance = async () => {
     try {
       const token = localStorage.getItem('erp_token');
-      const res = await fetch('http://localhost:5000/api/attendance', {
+      const res = await fetch('http://https://amdox-backend-1.onrender.com:5000/api/attendance', {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (res.ok) setLogs(await res.json());
@@ -26,7 +26,7 @@ export const Attendance: React.FC = () => {
     try {
       const token = localStorage.getItem('erp_token');
       const timeString = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-      const res = await fetch('http://localhost:5000/api/attendance', {
+      const res = await fetch('http://https://amdox-backend-1.onrender.com:5000/api/attendance', {
         method: 'POST',
         headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({ employeeName: user.name, date: new Date().toLocaleDateString(), status: `Checked In (${timeString})` }),

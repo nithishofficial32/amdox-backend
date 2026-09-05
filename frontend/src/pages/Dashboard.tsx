@@ -24,7 +24,7 @@ export const Dashboard: React.FC = () => {
     const fetchDashboardStats = async () => {
       try {
         const token = localStorage.getItem('erp_token');
-        const res = await fetch('http://localhost:5000/api/dashboard/stats', {
+        const res = await fetch('http://https://amdox-backend-1.onrender.com:5000/api/dashboard/stats', {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (res.ok) {

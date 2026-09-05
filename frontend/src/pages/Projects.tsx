@@ -24,7 +24,7 @@ export const Projects: React.FC = () => {
   const fetchProjects = async () => {
     try {
       const token = localStorage.getItem('erp_token');
-      const res = await fetch('http://localhost:5000/api/projects', {
+      const res = await fetch('http://https://amdox-backend-1.onrender.com:5000/api/projects', {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ export const Projects: React.FC = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('erp_token');
-      const res = await fetch('http://localhost:5000/api/projects', {
+      const res = await fetch('http://https://amdox-backend-1.onrender.com:5000/api/projects', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -71,7 +71,7 @@ export const Projects: React.FC = () => {
   const handleDeleteProject = async (id: string | number) => {
     try {
       const token = localStorage.getItem('erp_token');
-      const res = await fetch(`http://localhost:5000/api/projects/${id}`, {
+      const res = await fetch(`http://https://amdox-backend-1.onrender.com:5000/api/projects/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
